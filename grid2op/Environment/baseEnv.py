@@ -3123,8 +3123,8 @@ class BaseEnv(GridObjects, RandomObject, ABC):
             verbose = False
             if verbose: print("step:", self.nb_time_step)
             line_id_to_set = self.initial_outages[self.outage_idx]
-            act = self.action_space()
-            act.line_set_status = [[l_id, -1] for l_id in line_id_to_set]
+            # act = self.action_space()
+            # act.line_set_status = [[l_id, -1] for l_id in line_id_to_set]
             # perform the disconnection action
             for l in line_id_to_set:     
                 self.backend._disconnect_line(l)

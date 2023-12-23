@@ -967,7 +967,7 @@ class Backend(GridObjects, ABC):
     
     def shedload1(self, obs, to_disc_lines, verbose=False):
         if obs is None:
-            print("none obs")
+            #print("none obs")
             return False,None
         graph = obs.as_networkx()
         graph = nx.Graph(graph)  
